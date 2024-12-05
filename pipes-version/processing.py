@@ -18,12 +18,6 @@ class ProfanityFilter(Filter):
                 return ""
         return content
 
-class LoggingFilter(Filter):
-    def _process(self, content: str) -> str:
-        if content:
-            print(f"Processing message: {content}")
-        return content
-
 class EmailFilter(Filter):
     def __init__(self, outputs: list, email_config: dict):
         super().__init__(outputs)

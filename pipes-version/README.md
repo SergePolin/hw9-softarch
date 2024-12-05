@@ -21,7 +21,6 @@ The system consists of three main components:
 2. **Processing Filters**:
    - ScreamingFilter: Converts text to uppercase
    - ProfanityFilter: Censors specified bad words
-   - LoggingFilter: Logs messages as they pass through
    - EmailFilter: Sends processed messages via email
 3. **Pipeline**: Connects filters using multiprocessing Queues
 

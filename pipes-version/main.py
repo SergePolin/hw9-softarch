@@ -5,7 +5,7 @@ import sys
 import time
 
 from filter import Message
-from processing import ScreamingFilter, ProfanityFilter, LoggingFilter, EmailFilter
+from processing import ScreamingFilter, ProfanityFilter, EmailFilter
 from utils import BAD_WORDS, PipelineStats, EMAIL_SENDER, EMAIL_PASSWORD, EMAIL_RECIPIENTS
 
 class Pipeline:
@@ -22,14 +22,13 @@ class Pipeline:
                 'recipients': EMAIL_RECIPIENTS
             }
         )
-        self.logging = LoggingFilter(outputs=[self.email.input])
         self.profanity = ProfanityFilter(
-            outputs=[self.logging.input],
+            outputs=[self.email.input],
             bad_words=BAD_WORDS
         )
         self.screaming = ScreamingFilter(outputs=[self.profanity.input])
         
-        self.filters = [self.screaming, self.profanity, self.logging, self.email]
+        self.filters = [self.screaming, self.profanity, self.email]
         self.source_pipe = self.screaming.input
 
     def start(self):
