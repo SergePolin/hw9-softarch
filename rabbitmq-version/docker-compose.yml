@@ -1,0 +1,66 @@
+version: '3.8'
+
+services:
+  rabbitmq:
+    image: rabbitmq:3-management
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    healthcheck:
+      test: ["CMD", "rabbitmqctl", "status"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  api_service:
+    build: .
+    command: python api_service/main.py
+    ports:
+      - "8000:8000"
+    environment:
+      - RABBITMQ_HOST=rabbitmq
+      - RABBITMQ_PORT=5672
+      - RABBITMQ_USER=guest
+      - RABBITMQ_PASS=guest
+    depends_on:
+      rabbitmq:
+        condition: service_healthy
+
+  filter_service:
+    build: .
+    command: python filter_service/main.py
+    environment:
+      - RABBITMQ_HOST=rabbitmq
+      - RABBITMQ_PORT=5672
+      - RABBITMQ_USER=guest
+      - RABBITMQ_PASS=guest
+    depends_on:
+      rabbitmq:
+        condition: service_healthy
+
+  screaming_service:
+    build: .
+    command: python screaming_service/main.py
+    environment:
+      - RABBITMQ_HOST=rabbitmq
+      - RABBITMQ_PORT=5672
+      - RABBITMQ_USER=guest
+      - RABBITMQ_PASS=guest
+    depends_on:
+      rabbitmq:
+        condition: service_healthy
+
+  publish_service:
+    build: .
+    command: python publish_service/main.py
+    environment:
+      - RABBITMQ_HOST=rabbitmq
+      - RABBITMQ_PORT=5672
+      - RABBITMQ_USER=guest
+      - RABBITMQ_PASS=guest
+      - EMAIL_SENDER=${EMAIL_SENDER:-}
+      - EMAIL_PASSWORD=${EMAIL_PASSWORD:-}
+      - EMAIL_RECIPIENTS=${EMAIL_RECIPIENTS:-}
+    depends_on:
+      rabbitmq:
+        condition: service_healthy

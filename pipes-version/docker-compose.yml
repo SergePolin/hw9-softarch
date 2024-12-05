@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  api:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      - EMAIL_SENDER=${EMAIL_SENDER:-}
+      - EMAIL_PASSWORD=${EMAIL_PASSWORD:-}
+      - EMAIL_RECIPIENTS=${EMAIL_RECIPIENTS:-} 

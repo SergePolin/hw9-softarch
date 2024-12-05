@@ -1,0 +1,74 @@
+[
+  {
+    "test_name": "Test 1",
+    "config": {
+      "num_messages": 100,
+      "concurrent_users": 1
+    },
+    "metrics": {
+      "total_time": 12.104236841201782,
+      "total_requests": 100,
+      "successful_requests": 100,
+      "failed_requests": 0,
+      "avg_response_time": 0.017755186557769774,
+      "requests_per_second": 8.261570003290798,
+      "avg_cpu_percent": 41.56551724137929,
+      "avg_memory_mb": 19.92517510775862,
+      "test_duration": 12.104236841201782
+    }
+  },
+  {
+    "test_name": "Test 2",
+    "config": {
+      "num_messages": 100,
+      "concurrent_users": 10
+    },
+    "metrics": {
+      "total_time": 14.876022100448608,
+      "total_requests": 1000,
+      "successful_requests": 1000,
+      "failed_requests": 0,
+      "avg_response_time": 0.04104622507095337,
+      "requests_per_second": 67.22227173686731,
+      "avg_cpu_percent": 39.397872340425515,
+      "avg_memory_mb": 19.1682734929078,
+      "test_duration": 14.876022100448608
+    }
+  },
+  {
+    "test_name": "Test 3",
+    "config": {
+      "num_messages": 1000,
+      "concurrent_users": 10
+    },
+    "metrics": {
+      "total_time": 132.1959569454193,
+      "total_requests": 10000,
+      "successful_requests": 10000,
+      "failed_requests": 0,
+      "avg_response_time": 0.026658723950386046,
+      "requests_per_second": 75.64527865348235,
+      "avg_cpu_percent": 34.57702060221872,
+      "avg_memory_mb": 22.529665213946117,
+      "test_duration": 132.1959569454193
+    }
+  },
+  {
+    "test_name": "Test 4",
+    "config": {
+      "num_messages": 1000,
+      "concurrent_users": 50
+    },
+    "metrics": {
+      "total_time": 326.60616087913513,
+      "total_requests": 50000,
+      "successful_requests": 50000,
+      "failed_requests": 0,
+      "avg_response_time": 0.21743743641376495,
+      "requests_per_second": 153.0895800171484,
+      "avg_cpu_percent": 48.30433516661273,
+      "avg_memory_mb": 32.66584691442899,
+      "test_duration": 326.60616087913513
+    }
+  }
+]
