@@ -118,7 +118,7 @@ RabbitMQ maintains consistent throughput scaling, while Pipes-and-Filters throug
    - Simpler to deploy and debug
    - Adequate for low-volume, single-user scenarios
 
-3. **Future Improvements**:
+3. **Improvements**:
    - Pipes-and-Filters could be improved by:
      - Implementing better concurrency handling
      - Adding message buffering
