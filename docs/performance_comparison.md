@@ -1,21 +1,21 @@
 # Performance Comparison: RabbitMQ vs Pipes-and-Filters
 
-This document compares the performance characteristics of the two implementations of our message processing system:
+We compare the performance of the two message processing system implementations:
 
 1. Event-driven system using RabbitMQ
 2. Pipes-and-filters architecture using Python multiprocessing
 
 ## System Configurations
 
-Both systems were tested on the same hardware with the following specifications:
+Both systems were tested on the same hardware:
 
-- CPU: Intel Core i5 (2 cores, 4 threads) - MacBook Pro 2019 13-inch
-- Memory: 8GB RAM
-- OS: macOS
+- Intel Core i5 (2 cores, 4 threads) - MacBook Pro 2019 13-inch
+- 8GB RAM
+- macOS
 
 ## Test Scenarios
 
-We tested both implementations under various loads:
+We tested both implementations under the scenarios:
 
 1. Light load: 100 messages, 1 concurrent user
 2. Medium load: 100 messages, 10 concurrent users
@@ -68,9 +68,10 @@ We tested both implementations under various loads:
 
 ### Time Behavior
 
-- **RabbitMQ** shows significantly better response times across all scenarios
-- **Pipes-and-Filters** response times degrade more rapidly under load
-- RabbitMQ maintains consistent throughput scaling, while Pipes-and-Filters throughput remains relatively flat
+- **RabbitMQ** shows significantly better response times across all scenarios.
+- **Pipes-and-Filters** response times degrade more rapidly under load.
+
+RabbitMQ maintains consistent throughput scaling, while Pipes-and-Filters throughput remains relatively flat.
 
 ### Resource Utilization
 
@@ -92,7 +93,7 @@ We tested both implementations under various loads:
 
 ## Conclusions
 
-1. **Scalability**: RabbitMQ implementation demonstrates superior scalability, handling concurrent users more effectively.
+1. **Scalability**: RabbitMQ scales much better and handles multiple users at the same time with ease.
 
 2. **Reliability**: RabbitMQ maintains 100% success rate across all tests, while Pipes-and-Filters shows significant failures under stress.
 

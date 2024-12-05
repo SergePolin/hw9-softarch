@@ -1,0 +1,74 @@
+[
+  {
+    "test_name": "Test 1",
+    "config": {
+      "num_messages": 100,
+      "concurrent_users": 1
+    },
+    "metrics": {
+      "total_time": 11.82500696182251,
+      "total_requests": 100,
+      "successful_requests": 100,
+      "failed_requests": 0,
+      "avg_response_time": 0.013185744285583495,
+      "requests_per_second": 8.456654640699481,
+      "avg_cpu_percent": 29.11504424778762,
+      "avg_memory_mb": 21.905938882743364,
+      "test_duration": 11.82500696182251
+    }
+  },
+  {
+    "test_name": "Test 2",
+    "config": {
+      "num_messages": 100,
+      "concurrent_users": 10
+    },
+    "metrics": {
+      "total_time": 8.542417049407959,
+      "total_requests": 579,
+      "successful_requests": 579,
+      "failed_requests": 0,
+      "avg_response_time": 0.040298701567971024,
+      "requests_per_second": 67.77941145359183,
+      "avg_cpu_percent": 28.869999999999997,
+      "avg_memory_mb": 22.77724609375,
+      "test_duration": 8.542417049407959
+    }
+  },
+  {
+    "test_name": "Test 3",
+    "config": {
+      "num_messages": 1000,
+      "concurrent_users": 10
+    },
+    "metrics": {
+      "total_time": 0.45267701148986816,
+      "total_requests": 20,
+      "successful_requests": 20,
+      "failed_requests": 0,
+      "avg_response_time": 0.11112712621688843,
+      "requests_per_second": 44.18161181672386,
+      "avg_cpu_percent": 40.76666666666667,
+      "avg_memory_mb": 22.901041666666668,
+      "test_duration": 0.45267701148986816
+    }
+  },
+  {
+    "test_name": "Test 4",
+    "config": {
+      "num_messages": 1000,
+      "concurrent_users": 50
+    },
+    "metrics": {
+      "total_time": 1.1636202335357666,
+      "total_requests": 181,
+      "successful_requests": 181,
+      "failed_requests": 0,
+      "avg_response_time": 0.16526042163701346,
+      "requests_per_second": 155.5490311903695,
+      "avg_cpu_percent": 84.0,
+      "avg_memory_mb": 25.870535714285715,
+      "test_duration": 1.1636202335357666
+    }
+  }
+]

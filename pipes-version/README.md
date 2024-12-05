@@ -29,7 +29,7 @@ The system consists of three main components:
 ### Running the API Server
 
 ```bash
-python api.py
+python3 pipes-version/api.py
 ```
 
 The server will start on <http://localhost:8000>
@@ -43,7 +43,7 @@ The server will start on <http://localhost:8000>
 ### Running Performance Tests
 
 ```bash
-python ../tests/performance_test.py
+python3 tests/performance_test.py
 ```
 
 ## Docker Support

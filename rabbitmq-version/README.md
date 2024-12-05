@@ -45,16 +45,16 @@ This project implements a message processing system using RabbitMQ as the messag
 
     ```bash
     # Terminal 1 - API Service
-    python api_service/main.py
+    python3 rabbitmq-version/api_service/main.py
 
     # Terminal 2 - Filter Service
-    python filter_service/main.py
+    python3 rabbitmq-version/filter_service/main.py
 
     # Terminal 3 - SCREAMING Service
-    python screaming_service/main.py
+    python3 rabbitmq-version/screaming_service/main.py
 
     # Terminal 4 - Publish Service
-    python publish_service/main.py
+    python3 rabbitmq-version/publish_service/main.py
     ```
 
 ## System Architecture

@@ -1,0 +1,74 @@
+[
+  {
+    "test_name": "Test 1",
+    "config": {
+      "num_messages": 100,
+      "concurrent_users": 1
+    },
+    "metrics": {
+      "total_time": 21.30570697784424,
+      "total_requests": 100,
+      "successful_requests": 100,
+      "failed_requests": 0,
+      "avg_response_time": 0.10744260311126709,
+      "requests_per_second": 4.693578115196543,
+      "avg_cpu_percent": 33.7527093596059,
+      "avg_memory_mb": 21.906577124384235,
+      "test_duration": 21.30570697784424
+    }
+  },
+  {
+    "test_name": "Test 2",
+    "config": {
+      "num_messages": 100,
+      "concurrent_users": 10
+    },
+    "metrics": {
+      "total_time": 7.526495933532715,
+      "total_requests": 65,
+      "successful_requests": 65,
+      "failed_requests": 0,
+      "avg_response_time": 0.9665001539083627,
+      "requests_per_second": 8.636156928007654,
+      "avg_cpu_percent": 23.421311475409837,
+      "avg_memory_mb": 22.678662909836067,
+      "test_duration": 7.526495933532715
+    }
+  },
+  {
+    "test_name": "Test 3",
+    "config": {
+      "num_messages": 1000,
+      "concurrent_users": 10
+    },
+    "metrics": {
+      "total_time": 1.5401232242584229,
+      "total_requests": 10,
+      "successful_requests": 10,
+      "failed_requests": 0,
+      "avg_response_time": 0.8308489322662354,
+      "requests_per_second": 6.492986952271336,
+      "avg_cpu_percent": 47.56666666666666,
+      "avg_memory_mb": 22.73046875,
+      "test_duration": 1.5401232242584229
+    }
+  },
+  {
+    "test_name": "Test 4",
+    "config": {
+      "num_messages": 1000,
+      "concurrent_users": 50
+    },
+    "metrics": {
+      "total_time": 6.057724952697754,
+      "total_requests": 50,
+      "successful_requests": 50,
+      "failed_requests": 0,
+      "avg_response_time": 2.9278248882293703,
+      "requests_per_second": 8.253923773434604,
+      "avg_cpu_percent": 46.0,
+      "avg_memory_mb": 25.59765625,
+      "test_duration": 6.057724952697754
+    }
+  }
+]
